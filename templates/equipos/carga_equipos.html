@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title> Carga de Equipos</title>
+{% endblock title %}
+
+{% block contenido %}
+    <h1>Crear nuevo equipo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear equipo">
+    </form>
+{% endblock contenido %}

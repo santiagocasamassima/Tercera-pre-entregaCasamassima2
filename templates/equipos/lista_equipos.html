@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title> Listado de Equipos</title>
+{% endblock title %}
+
+{% block contenido %}
+    <h1> Bienvenidos</h1>Hola
+    <h3>Equipos integrados</h3>
+    <ul>
+        {% for equipo in equipos %}
+        <li>
+            {{equipo.nombre}}, {{equipo.ubicacion}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock contenido %}
