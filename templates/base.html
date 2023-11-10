@@ -24,12 +24,11 @@
         <!-- Navigation (header)-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="">Inicio</a>
-                <a class="navbar-brand" href="">Equipos</a>
-                <a class="navbar-brand" href="">Proveedores</a>
-                <a class="navbar-brand" href="">Referentes</a>
-                <a class="btn btn-primary" href="#signup">Cargar nuevo Equipo</a>
-            </div>
+                <a class="navbar-brand" href="{% url 'lista_equipos' %}">Equipos</a>
+                <a class="navbar-brand" href="{% url 'lista_proveedores' %}">Proveedores</a>
+                <a class="navbar-brand" href="{% url 'lista_referentes' %}">Referentes</a>
+                <a class="btn btn-primary" href="">Inicio</a>
+                </div>
         </nav>
 
         <section style="padding:4rem 3rem;">

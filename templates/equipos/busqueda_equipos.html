@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    <title>Buscar equipo</title>
+{% endblock titulo %}
+
+{% block contenido %}
+<a href="{% url 'equipos/lista_equipos' %}">Ver todos</a>
+
+<form action="{% url 'equipos/busqueda_equipo' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="buscar">
+    <input type="submit" value="Buscar por nombre de Equipo">
+</form>
+<ul>
+    {% for equipo in equipos %}
+    <li>
+        {{equipo.nombre}}, {{equipo.ubicacion}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock contenido %}
